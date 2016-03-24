@@ -280,3 +280,35 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+.bg-slider {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:0;
+    top:0;
+    left:0;
+}
+
+
+@keyframes slick {
+    0% {
+        transform:scale(1);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform:scale(1.1);
+        animation-timing-function: ease-out;
+    }
+}
+
+
+.bg-slider .slick-slide {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transform:scale(1.1);
+}
+
+.bg-slider .slick-slide.slick-active { animation-name:slick;}
+
