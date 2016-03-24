@@ -281,6 +281,8 @@ textarea {
     }
 }
 
+body {font-family:Roboto;}
+
 .bg-slider {
     width:100%;
     height:100%;
@@ -288,6 +290,7 @@ textarea {
     z-index:0;
     top:0;
     left:0;
+    background-color: #000;
 }
 
 
@@ -304,10 +307,22 @@ textarea {
 
 @keyframes slick {
     0% {
+        opacity:0;
         transform:scale(1);
         animation-timing-function: ease-in;
     }
+        
+    10% {
+        opacity:1;
+        animation-timing-function: ease-out;
+    }
+    
+    90% {
+        opacity:1;
+    }
+    
     100% {
+        opacity:0;
         transform:scale(1.1);
         animation-timing-function: ease-out;
     }
@@ -319,8 +334,11 @@ textarea {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     transform:scale(1.1);
+    opacity:0;
     -webkit-transform:scale(1.1);
 }
 
 .bg-slider .slick-slide.slick-active { -webkit-animation-name:slick; animation-name:slick; }
-
+.side-menu {position:absolute;top:0;left:0;width:250px;height:100%;background-color: rgba(0,0,0,.9);}
+.side-menu-burger {color:#fff;width:43px;font-size: 14px;font-weight: 300;line-height: 72px;height:50px;background:url(../img/side-menu-burger.png) top center no-repeat;position:relative;top:10%;left:40%;}
+.side-menu-burger span {position:relative;top:10px;}
