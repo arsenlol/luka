@@ -281,6 +281,8 @@ textarea {
     }
 }
 
+body {font-family:Roboto;}
+
 .bg-slider {
     width:100%;
     height:100%;
@@ -288,6 +290,7 @@ textarea {
     z-index:0;
     top:0;
     left:0;
+    background-color: #000;
 }
 
 
@@ -304,10 +307,22 @@ textarea {
 
 @keyframes slick {
     0% {
+        opacity:0;
         transform:scale(1);
         animation-timing-function: ease-in;
     }
+        
+    10% {
+        opacity:1;
+        animation-timing-function: ease-out;
+    }
+    
+    90% {
+        opacity:1;
+    }
+    
     100% {
+        opacity:0;
         transform:scale(1.1);
         animation-timing-function: ease-out;
     }
@@ -319,8 +334,58 @@ textarea {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     transform:scale(1.1);
+    opacity:0;
     -webkit-transform:scale(1.1);
 }
 
 .bg-slider .slick-slide.slick-active { -webkit-animation-name:slick; animation-name:slick; }
+.side-menu {position:absolute;top:0;left:-250px;width:250px;height:100%;background-color: rgba(0,0,0,.9);text-transform:uppercase;}
+.side-menu-burger {position:absolute;top:7%;left:50%;margin-left:-21.5px;color:#fff;width:43px;font-size: 14px;font-weight: 300;line-height: 72px;height:50px;background:url(../img/side-menu-burger.png) top center no-repeat;}
+.side-menu-burger span {position:relative;top:10px;}
+
+.side-menu-list {position:absolute;list-style:none;display:block;width:100%;top:20%;padding:0;}
+.side-menu-list li {border-top:1px solid #666;text-align:center;}
+.side-menu-list li:last-of-type {border-bottom:1px solid #666;}
+.side-menu-list li a {font-size: 18px;font-weight: 400;padding:6% 0;text-decoration:none;color:#fff;display:block;transition:.3s;}
+.side-menu-list li a:hover {background-color: #a8534a;}
+
+.side-feedback {position:absolute; top:77%; left:50%; margin-left:-100px;border:1px solid #666;text-align:center;font-size: 16px;font-weight: 300;line-height: 55px;width:200px;color:#666;}
+
+.side-socials {position:absolute;bottom:3%;left:50%;width:84px;margin-left:-26px;}
+.side-socials a {font-size:16px;color:#fff;display:inline-block;margin-right:10px;width:20px; height:20px;}
+
+
+
+.side-menu.closed {width:80px !important;}
+.side-menu.closed .side-menu-list li,
+.side-menu.closed .side-feedback, .side-menu.closed .side-socials {opacity:0 !important;}
+
+.copyright {font-size: 14px; font-weight: 400;position:absolute;width:400px;margin-left:-200px;left:50%;bottom:20px;text-align:center;color:#eee;}
+
+.darkside {width:300px;height:100%;position:absolute;right:0px;top:0;
+background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(0,0,0,.75) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(0,0,0,.75) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(0,0,0,.75) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12*/
+}
+ 
+.dark-bar {height:300px;position:absolute;top:50%;margin-top:-150px;color:#fff;right:50px;}
+.dark-item {border-radius:50%;border:2px solid rgba(255,255,255,.75); height:40px;width:40px;text-align:center;line-height:40px;transition:.3s;cursor:pointer;}
+.dark-item:hover {color:#000;background-color: #fff;}
+.dark-item.call{margin-bottom:20px;}
+.dark-item.mail{margin-bottom:50px;}
+.dark-item.search{margin-bottom:20px;}
+
+.dark-item.call i {font-size:25px;position:relative;top:4px;}
+.dark-item.mail i {font-size:20px;position:relative;top:1px;}
+.dark-item.search i {font-size:20px;position:relative;top:1px;}
+.dark-item.lang i {text-transform:uppercase;font-style:normal; position:relative;top:-1px;}
+
+.madeby .dark-item {display: inline-block;}
+.madeby span {display: inline-block;color:#fff;margin:0 10px;opacity:.7;}
+
+.madeby {position:absolute;bottom:20px;right:30px;font-size:14px;}
+.madeby i:before {content:url(../img/ship.png);width:37px;height:40px;}
+.madeby:hover i:before {content:url(../img/ship-hover.png);}
+.madeby:hover .dark-item {background-color: #fff;}
+.madeby:hover span {opacity:1;}
 
