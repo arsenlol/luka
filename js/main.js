@@ -24,6 +24,13 @@ $(document).ready(function(){
     $('.side-menu').animate({left:'0px'},500,sideNavSlideToggle)
     }, 1000);
     
+    // Поиск
+    slideSearch();
+    
+    
+    
+    
+    
     function sideNavSlideToggle (){
         //прячет боковое меню когда не ховер
         $('.side-menu').mouseleave(function(){
@@ -40,7 +47,33 @@ $(document).ready(function(){
         });
     };
     
-  
+    function slideSearch(){
+         $('.search-block').mouseenter(function(){
+            $('.search-input input').clearQueue().stop();
+             $('.search.dark-item').css({'color':'#000','background':'#fff'});
+            $('.search-input input').animate({
+                'width':'226px',
+                'padding':'10px 50px 10px 15px',
+                'opacity':'1'
+            },300, slidebackSearch);
+        });
+    }
+        
+    function slidebackSearch(){
+        $('.search-block').mouseleave(function(){
+            if ($('.search-input input').is(':focus')) {
+                return false;
+            } else {
+                $('.search-input input').clearQueue().stop();
+                $('.search.dark-item').css({'color':'#fff','background':'transparent'});
+                $('.search-input input').animate({
+                    'width':'0px',
+                    'padding':'10px 0 10px 0',
+                    'opacity':'0'
+                },300);    
+            }
+        });
+    }
     
    //----------------------------------------------------------------- 
     //считает высоту окна 

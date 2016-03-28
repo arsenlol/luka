@@ -347,7 +347,11 @@ body {font-family:Roboto;}
 .side-menu-list li {border-top:1px solid #666;text-align:center;}
 .side-menu-list li:last-of-type {border-bottom:1px solid #666;}
 .side-menu-list li a {font-size: 18px;font-weight: 400;padding:6% 0;text-decoration:none;color:#fff;display:block;transition:.3s;}
-.side-menu-list li a:hover {background-color: #a8534a;}
+.side-menu-list li a:hover {background-color: #a8534a;letter-spacing:2px;}
+@-moz-document url-prefix(){ /*Мозилла не поддерживает letterspacing*/
+    .side-menu-list li a:hover {background-color: #a8534a;letter-spacing:0px;}
+}
+
 
 .side-feedback {position:absolute; top:77%; left:50%; margin-left:-100px;border:1px solid #666;text-align:center;font-size: 16px;font-weight: 300;line-height: 55px;width:200px;color:#666;}
 
@@ -388,4 +392,24 @@ background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(0,0,0,.75) 10
 .madeby:hover i:before {content:url(../img/ship-hover.png);}
 .madeby:hover .dark-item {background-color: #fff;}
 .madeby:hover span {opacity:1;}
+
+.search-block {position:relative;}
+.search-input {position:absolute;right:0;color:#000;}
+.search-input input {padding:10px 0 10px 0;line-height:20px;width:0;border-radius:20px;color:#000;border:none;background-color:rgba(255,255,255,.7)}
+.search-block input:focus {outline:none;}
+.dark-item.search {transition:.5s;}
+.dark-item.search i input {width: 40px;  height: 40px; background: transparent; border: none; font-size: 0; border-radius: 50%; position: absolute; top: -10px;left: -11px;}
+.search-input input::-webkit-input-placeholder { color: #333;}
+:-moz-placeholder { /* Firefox 18- */   color: #333; }
+::-moz-placeholder {  /* Firefox 19+ */  color: #333; }
+:-ms-input-placeholder { color: #333;  }
+
+.logo {position: absolute; width: 600px; margin-left: -300px; text-align: center;   left: 50%; top: 50%; margin-top: -77.5px;height:auto;
+}
+.logo-shadow {position: absolute; width: 1000px; margin-left: -500px; left: 50%; top: 50%; margin-top:-156px; height:312px;
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.75) 0%, rgba(179,179,179,0) 70%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.75) 0%,rgba(179,179,179,0) 70%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  rgba(0,0,0,0.75) 0%,rgba(179,179,179,0) 70%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
