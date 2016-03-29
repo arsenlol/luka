@@ -1,7 +1,7 @@
 //задать дительность анимации одного слайда: *секунд
 var bgSlideDuration = 10;
 
-//слайдер для фона
+// Инициализация слайдера в фоне
 var Bg = function(){
     $('.bg-slider').slick({
       infinite: true,
@@ -16,20 +16,58 @@ var Bg = function(){
 }
 Bg();
 
+// ОСТАНОВИТЬ ИТЕРАЦИИ СЛАЙДЕРА КОГДА ВКЛАДКА НЕ АКТИВНА -----------------------------/
+// Set the name of the hidden property and the change event for visibility
+var hidden, visibilityChange; 
+if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support 
+  hidden = "hidden";
+  visibilityChange = "visibilitychange";
+} else if (typeof document.mozHidden !== "undefined") {
+  hidden = "mozHidden";
+  visibilityChange = "mozvisibilitychange";
+} else if (typeof document.msHidden !== "undefined") {
+  hidden = "msHidden";
+  visibilityChange = "msvisibilitychange";
+} else if (typeof document.webkitHidden !== "undefined") {
+  hidden = "webkitHidden";
+  visibilityChange = "webkitvisibilitychange";
+}
+
+// If the page is hidden, pause the video;
+// if the page is shown, play the video
+function handleVisibilityChange() {
+  if (document[hidden]) {
+    $(".bg-slider").slick('slickPause');
+  } else {
+    $(".bg-slider").slick('slickNext');
+    $(".bg-slider").slick('slickPlay');
+  }
+}
+
+// Warn if the browser doesn't support addEventListener or the Page Visibility API
+if (typeof document.addEventListener === "undefined" || 
+  typeof document[hidden] === "undefined") {
+  alert("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+} else {
+  // Handle page visibility change   
+  document.addEventListener(visibilityChange, handleVisibilityChange, false);
+    }
+//------------------------------------------------------------------------------------/
+
+
+
+
 $(document).ready(function(){
     //да мой код говно, но он работает.
     
-    //выезжает боковое меню при загрузке
+    //выезжает боковое меню при загрузке //СДЕЛАТЬ ТАК ЧТОБ СРАБАТЫВАЛО ТОЛЬКО НА index.html
     setTimeout(function(){
     $('.side-menu').animate({left:'0px'},500,sideNavSlideToggle)
     }, 1000);
     
     // Поиск
     slideSearch();
-    
-    
-    
-    
+        
     
     function sideNavSlideToggle (){
         //прячет боковое меню когда не ховер
@@ -86,7 +124,8 @@ $(document).ready(function(){
         
         //задает эту высоту боковому меню
         $('.side-menu').css({'height': wh});
-
+        
+        $('#wrapper').simplebar();
 
         //задает фоновое изображение слайда и добавляет указанную в первой строке длительность анимации
 		$('.bg-slider .slick-slide').each(function (i) {

@@ -35,7 +35,7 @@
            </div>
            <ul class="side-menu-list">
                <li><a href="./about.html"><span>о нас</span></a></li>
-               <li><a href="services.html"><span>услуги</span></a></li>
+               <li><a href="#"><span>услуги</span></a></li>
                <li><a href="#"><span>наши работы</span></a></li>
                <li><a href="#"><span>партнеры</span></a></li>
                <li><a href="#"><span>новости</span></a></li>
@@ -73,7 +73,11 @@
         </div>
         
         
-        
+        <section class='main'>
+            <div class="wrapper simplebar" id="wrapper">
+               
+            </div>
+        </section>
 
         
         
