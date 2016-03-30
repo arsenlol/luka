@@ -56,6 +56,17 @@ if (typeof document.addEventListener === "undefined" ||
 
 
 
+var $grid = $('.work-gal').masonry({
+  itemSelector: '.gal-item',
+  fitWidth: true,
+  gutter:10,
+  columnWidth: 350
+});
+// layout Masonry after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.masonry('layout');
+});
+
 
 $(document).ready(function(){
     //да мой код говно, но он работает.
@@ -141,5 +152,13 @@ $(document).ready(function(){
     
     //Пересчитать высоту окна при ресайзе
     $(window).on("resize", resizeCalc);
+    
+    $('.work-gal').magnificPopup({
+      delegate: 'a', // child items selector, by clicking on it popup will open
+      type: 'image',
+        gallery:{enabled:true},
+        titleSrc: 'title'
+      // other options
+    });
 
 });
