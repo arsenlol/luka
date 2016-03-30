@@ -172,3 +172,14 @@ article {padding:10px 50px;}
 .gal-item>div img {display: block; max-width: 100%; margin:0 auto;}
 .gal-item:hover>div>div {opacity:1;} 
 
+/* Новости */
+.news-wrapper:after {content: ''; display: block;clear: both;}
+.news-wrapper {width:90%;margin-left:8.5%;margin-bottom:50px;}
+.news-item {width:45%;float:left;margin-bottom:35px;padding:0;}
+.news-item a {color:#ef5050; font-size:18px;}
+.news-item p {display:inline;}
+.news-item a:last-child{display:inline;}
+.news-item h3 {font-size:18px;}
+.news-item a:hover {text-decoration:underline;}
+.news-item img {display:block;max-width:100%;margin:20px 0 15px;}
+

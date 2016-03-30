@@ -67,6 +67,11 @@ $grid.imagesLoaded().progress( function() {
   $grid.masonry('layout');
 });
 
+$('.news-wrapper').masonry({
+  itemSelector: '.news-item',
+  gutter:50,
+  percentPosition: true
+});
 
 $(document).ready(function(){
     //да мой код говно, но он работает.
