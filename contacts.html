@@ -76,45 +76,47 @@
         
         <section class='main'>
             <div class="wrapper simplebar" id="wrapper">
-               <header>
-                   <h1>Услуги</h1>
-               </header>
-               <div class="services">
-                       <div class="serv-item">
-                           <img src="img/s1.jpg" alt="">
-                           <div>
-                               <p>Изготовление всех видов наружной рекламы</p>
-                               <a href="services-detailed.html"><span>Подробнее</span></a>
+                <div class="contacts">
+                    <header>
+                       <h1>Контакты</h1>
+                   </header>
+                    <article>
+                        <div>
+                            <div class="tel">
+                                <i class="fa fa-phone"></i>
+                                <p>Тел: +380 (73) 037 38 28, +380 (99) 510 03 93</p>
+                            </div>
+                            <div class="mail">
+                               <i class="fa fa-envelope-o"></i>
+                                <p>Email: LukaGalamar@gmail.com</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="adrs">
+                                <i class="fa fa-map-marker"></i>
+                                <p>Адрес: г. Житомир, ул. Победы, 80-А</p>
+                            </div>
+                            <div class="cal">
+                               <i class="fa fa-calendar"></i> 
+                               <p class="cal">График работы: Пн-Пт 9:00-18:00, Сб-Вс - выходные</p>
                            </div>
-                       </div>
-                       <div class="serv-item">
-                           <img src="img/s2.jpg" alt="">
-                           <div>
-                               <p>Комплексное оформление фасадов</p>
-                               <a href="services-detailed.html"><span>Подробнее</span></a>
-                           </div>
-                       </div>
-                       <div class="serv-item">
-                           <img src="img/s3.jpg" alt="">
-                           <div>
-                               <p>Производство сувенирной продукции</p>
-                               <a href="services-detailed.html"><span>Подробнее</span></a>
-                           </div>
-                       </div>
-                       <div class="serv-item">
-                           <img src="img/s4.jpg" alt="">
-                           <div>
-                               <p>Порезка, обработка металлов, дерева, стекла</p>
-                               <a href="services-detailed.html"><span>Подробнее</span></a>
-                           </div>
-                       </div>
-                       <div class="serv-item">
-                           <img src="img/s5.jpg" alt="">
-                           <div>
-                               <p>Дизайнерские услуги</p>
-                               <a href="services-detailed.html"><span>Подробнее</span></a>
-                           </div>
-                       </div>
+                        </div>
+                        <section class="map" id="googleMap"></section>
+                        <h3>У вас остались вопросы? Напишите нам!</h3>
+                        <form action="">
+                            <div>
+                              <input type="text" placeholder="Имя:">
+                              <input type="email" placeholder="Email:">
+                            </div>
+                            <div>
+                                <textarea type="textarea" placeholder="Сообщение:"></textarea>
+                            </div>
+                            <div>
+                                <input type="submit" value="Отправить">
+                            </div>
+                        </form>
+                    </article>
+                    
                 </div>
             </div>
         </section>
@@ -144,6 +146,7 @@
         <script src="js/vendor/masonry.pkgd.min.js"></script>
         <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
         <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
