@@ -82,34 +82,45 @@ if (typeof document.addEventListener === "undefined" ||
 
 
 
-var $grid = $('.work-gal').masonry({
-  itemSelector: '.gal-item',
-  fitWidth: true,
-  gutter:10,
-  columnWidth: 350
-});
-// layout Masonry after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.masonry('layout');
-});
 
-$('.news-wrapper').masonry({
-  itemSelector: '.news-item',
-  gutter:50,
-  percentPosition: true
-});
 
 $(document).ready(function(){
     //да мой код говно, но он работает.
     
+    // Галерея *Наши работы*
+    var $grid1 = $('.work-gal').masonry({
+      itemSelector: '.gal-item',
+      fitWidth: true,
+      gutter:10,
+      columnWidth: 350
+    });
+    $grid1.imagesLoaded().progress( function() {
+        $grid1.masonry('layout');
+    });
+    
+    // Галерея новостей
+    var $grid2 = $('.news-wrapper').masonry({
+      itemSelector: '.news-item',
+      gutter:50,
+      percentPosition: true
+    });
+    $grid2.imagesLoaded().progress( function() {
+      $grid2.masonry('layout');
+    });
+    
+    // Тень для лого
+    setTimeout(function(){
+        $('.logo-shadow').css({'opacity':'1'});
+    }, 2000);
+    
     //выезжает боковое меню при загрузке //СДЕЛАТЬ ТАК ЧТОБ СРАБАТЫВАЛО ТОЛЬКО НА index.html
     setTimeout(function(){
-    $('.side-menu').animate({left:'0px'},500,sideNavSlideToggle)
+        $('.side-menu').animate({left:'0px'},500,sideNavSlideToggle)
     }, 1000);
     
     // Поиск
     slideSearch();
-        
+   
     
     function sideNavSlideToggle (){
         //прячет боковое меню когда не ховер
@@ -117,12 +128,27 @@ $(document).ready(function(){
             $('.side-menu, .side-menu-list li, .side-feedback').clearQueue().stop();
             $('.side-menu-list li, .side-feedback').animate({'opacity':'0'},200);
             $('.side-menu').animate({'width':'80px'},400); 
+            $('.side-menu-burger div').css({ 
+                'transform': 'rotateY(0deg)',
+                'background-image':'url(img/side-menu-burger.png)',
+                'background-size':'42px 28px'
+                });
+            $('.side-menu-burger span').css({'transform': 'rotateY(0deg)'});
+            $('.side-menu-burger span').text('меню');
+            
         });
     
         //выезжает боковое меню по наведению
         $('.side-menu').mouseenter(function(){
             $('.side-menu, .side-menu-list li, .side-feedback').clearQueue().stop();
             $('.side-menu').animate({'width':'250px'},300);
+            $('.side-menu-burger div').css({ 
+                'transform': 'rotateY(360deg)',
+                'background-image':'url(img/logo.png)',
+                'background-size':'49px 40px'
+                });
+            $('.side-menu-burger span').css({'transform': 'rotateY(360deg)'});
+            $('.side-menu-burger span').text('главная');
             $('.side-menu-list li, .side-feedback').delay(200).animate({'opacity':'1'},200);
         });
     };
@@ -130,7 +156,7 @@ $(document).ready(function(){
     function slideSearch(){
          $('.search-block').mouseenter(function(){
             $('.search-input input').clearQueue().stop();
-             $('.search.dark-item').css({'color':'#000','background':'#fff'});
+            $('.search.dark-item i').css({'color':'#000','background':'#fff'});
             $('.search-input input').animate({
                 'width':'226px',
                 'padding':'10px 50px 10px 15px',
@@ -145,7 +171,7 @@ $(document).ready(function(){
                 return false;
             } else {
                 $('.search-input input').clearQueue().stop();
-                $('.search.dark-item').css({'color':'#fff','background':'transparent'});
+                $('.search.dark-item i').css({'color':'#fff','background':'transparent'});
                 $('.search-input input').animate({
                     'width':'0px',
                     'padding':'10px 0 10px 0',
