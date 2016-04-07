@@ -23,7 +23,7 @@ function initialize()
 {
 var mapProp = {
   center:myCenter,
-  scrollwheel: false,
+  /*scrollwheel: false,*/
   zoom:17,
   mapTypeId:google.maps.MapTypeId.ROADMAP
   };
@@ -193,7 +193,7 @@ $(document).ready(function(){
         //задает эту высоту боковому меню
         $('.side-menu').css({'height': wh});
         
-        $('#wrapper').simplebar();
+        $('#wrapper').simplebar({ autoHide: false });
 
         //задает фоновое изображение слайда и добавляет указанную в первой строке длительность анимации
 		$('.bg-slider .slick-slide').each(function (i) {
@@ -210,12 +210,29 @@ $(document).ready(function(){
     //Пересчитать высоту окна при ресайзе
     $(window).on("resize", resizeCalc);
     
+    $('.clients-wrap').slick({
+      infinite: true,
+      arrows: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: true,
+      pauseOnHover:false,
+      prevArrow: '<i class="fa fa-angle-left"></i>',
+      nextArrow: '<i class="fa fa-angle-right"></i>'
+    }); 
+    
     $('.work-gal').magnificPopup({
       delegate: 'a', // child items selector, by clicking on it popup will open
       type: 'image',
         gallery:{enabled:true},
         titleSrc: 'title'
       // other options
+    });
+    
+    $('.toggle-trigger').click(function(){
+       $(this).siblings('.toggle-content').slideToggle(); 
+       $(this).find($('i')).toggleClass('i-rotate');
+       $('.simplebar-scroll-content').scrollTo($(this),500);
     });
 
 });
