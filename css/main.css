@@ -249,15 +249,16 @@ box-shadow: 0px 0px 33px 5px rgba(17,17,17,1);
 .news-date {color:#aaa;}
 
 /* Контакты */
+.contacts header {padding: 5px 0px;}
 .contacts article {text-align:center;padding:50px; margin-top:-40px;}
-.contacts article>div {display:inline-block;text-align:left; margin:0 20px;}
+.contacts article>div {display:inline-block;text-align:left; margin:0 15px;}
 .contacts article div i, .contacts article div p {display:inline-block;}
 .contacts article div i {padding-right:10px;font-size:1.2em;}
 .map {height:350px; margin:20px 0 0;
 -webkit-box-shadow: 0px 0px 33px 5px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 33px 5px rgba(0,0,0,0.75);
 box-shadow: 0px 0px 33px 5px rgba(0,0,0,0.75);}
-.contacts article h3 {color:#ddd;padding:30px 0 40px;}
+.contacts article h3 {color:#ddd;padding:20px 0;}
 .contacts article form>div {display:inline-block;width:35%;vertical-align:top;}
 .contacts article form>div:last-child {width:20%;text-align:right;}
 .contacts article form input {display:block;background:#222;border-color:transparent; border-bottom:2px solid #666;outline:none;}
@@ -274,3 +275,145 @@ box-shadow: 0px 0px 33px 5px rgba(0,0,0,0.75);}
 .contacts article form textarea {height:105px;width:90%;background:#222;border:2px solid #666;outline:none;padding:10px;}
 .contacts article form input[type='submit'] {display:inline-block;padding:15px;border:2px solid #ef5050; color:#ef5050; text-transform:uppercase;vertical-align:middle;transition:.3s;border-radius:5px;font-size:18px;}
 .contacts article form input[type='submit']:hover {border:2px solid #fff; color:#333; background:#fff;}
+
+.clients, .partners {text-align:center;}
+.partners { margin:0 0 40px;}
+
+.clients figure, .partners figure {text-align:center; display:inline-block;}
+.clients figcaption, .partners figcaption {width:160px; margin:10px 0 0 ;}
+.clients-wrap { left: -1.5%;}
+.clients .slick-slide:focus {outline:none;}
+.clients .slick-arrow {font-size:40px; color:#ef5050; position:absolute; top:25%;}
+.clients .slick-arrow.fa-angle-left {left:-2%;}
+.clients .slick-arrow.fa-angle-right {right:-5%;}
+
+.about-1 { /* Avers */
+  background-image: url(../img/about.png);
+  background-position: 0px -55px;
+  width: 160px;
+  height: 55px;
+}
+.about-10 { /* Global */
+  background-image: url(../img/about.png);
+  background-position: 0px -220px;
+  width: 160px;
+  height: 55px;
+}
+.about-11 { /* Fokstrot */
+  background-image: url(../img/about.png);
+  background-position: -160px 0px;
+  width: 160px;
+  height: 55px;
+}
+.about-12 { /* Gold */
+  background-image: url(../img/about.png);
+  background-position: -160px -55px;
+  width: 160px;
+  height: 55px;
+}
+.about-13 { /* Upg */
+  background-image: url(../img/about.png);
+  background-position: 0px -110px;
+  background-color:#fff;
+  width: 160px;
+  height: 55px;
+}
+.about-14 { /* Rud' */
+  background-image: url(../img/about.png);
+  background-position: -160px -110px;
+  width: 160px;
+  height: 55px;
+}
+.about-15 { /* MTC */
+  background-image: url(../img/about.png);
+  background-position: 0px -165px;
+  width: 160px;
+  height: 55px;
+}
+.about-16 { /* Kyivstar */
+  background-image: url(../img/about.png);
+  background-position: -160px -165px;
+  width: 160px;
+  height: 55px;
+}
+.about-17 { /* Bank Aval' */
+  background-image: url(../img/about.png);
+  background-position: 0px 0px;
+  width: 160px;
+  height: 55px;
+}
+.about-2 { /* Mihail */
+  background-image: url(../img/about.png);
+  background-position: -160px -220px;
+  width: 160px;
+  height: 55px;
+}
+.about-3 { /* WRS */
+  background-image: url(../img/about.png);
+  background-position: -320px 0px;
+  width: 160px;
+  height: 55px;
+}
+.about-4 { /* Prospekt */
+  background-image: url(../img/about.png);
+  background-position: -320px -55px;
+  width: 160px;
+  height: 55px;
+}
+.about-5 { /* Zhara */
+  background-image: url(../img/about.png);
+  background-position: -320px -110px;
+  width: 160px;
+  height: 55px;
+}
+.about-6 { /* Chas poisty */
+  background-image: url(../img/about.png);
+  background-position: -320px -165px;
+  width: 160px;
+  height: 55px;
+}
+.about-7 { /* Voronin */
+  background-image: url(../img/about.png);
+  background-position: -320px -220px;
+  width: 160px;
+  height: 55px;
+}
+.about-8 { /* Medilaif Apteka */
+  background-image: url(../img/about.png);
+  background-position: 0px -275px;
+  width: 160px;
+  height: 55px;
+}
+.about-9 { /* Sharikava */
+  background-image: url(../img/about.png);
+  background-position: -160px -275px;
+  width: 160px;
+  height: 55px;
+}
+
+.vacancies article:last-child {margin-bottom:50px;}
+.vacancies article>div {display:inline-block; vertical-align:middle;}
+.vacancies article .vac-list {border: 1px solid #fc7a38; color:#ccc;}
+.vacancies article .vac-list h4 {text-transform:uppercase; text-align:center; margin:0; padding:25px 0 0;}
+.vacancies article .vac-list ul {text-align:left;margin:0; padding:20px 25px 25px;  list-style:none;}
+.vacancies article .vac-list li {background: url('../img/check.png') left center no-repeat; line-height:24px;padding-left:30px; margin:10px 0;}
+.vacancies .vac-text { width:700px;padding-left:30px;}
+.vacancies .vac-text:first-letter {font-size:1.5em;}
+.vacancies .toggle-item {width:100%; margin-bottom:10px;}
+.vacancies .toggle-trigger {cursor:pointer; background-color: #464646; }
+.vacancies .toggle-trigger h4 {margin:0; padding:15px 20px; font-weight:bold;}
+.vacancies .toggle-trigger h4 i {float:right; font-size:30px; margin-top:-5px; transition:.3s;}
+.i-rotate {transform:rotate(180deg);}
+.vacancies .toggle-content {display:none;}
+.vacancies .vac-form {margin-top:20px; display:inline-block; vertical-align:top; width:400px; text-align:center; border:1px solid #666; padding:10px 25px 20px;}
+.vacancies .vac-form form input {display:block;background:#222;border-color:transparent; border-bottom:2px solid #666;outline:none;}
+.vacancies .vac-form form input:focus {background:#333;}
+.vacancies .vac-form form input::-webkit-input-placeholder { font-style:italic}
+.vacancies .vac-form form input:-moz-placeholder { /* Firefox 18- */   font-style:italic }
+.vacancies .vac-form form input::-moz-placeholder {  /* Firefox 19+ */  font-style:italic }
+.vacancies .vac-form form input:-ms-input-placeholder { font-style:italic }
+.vacancies .vac-form form input[type='text'], .vacancies .vac-form form input[type='email'], .vacancies .vac-form form input[type='file'] {padding:10px;margin:15px auto;width:90%;}
+.vacancies .vac-form form input[type='submit'] {display:inline-block;padding: 10px 15px;border:2px solid #ef5050; color:#ef5050; text-transform:uppercase;vertical-align:middle;transition:.3s;border-radius:3px;font-size:18px; margin-top:10px;}
+.vacancies .vac-form form input[type='submit']:hover {border:2px solid #fff; color:#333; background:#fff;}
+
+.vacancies .vac-description {display:inline-block; vertical-align:middle; padding:20px 30px;  width:590px; color:#ccc;}
