@@ -14,7 +14,7 @@ a:active, a:focus, a:visited, a:focus {text-decoration:none;outline: none;}
 
 /* Левая секция */
 .side-menu {position:absolute;top:0;left:-250px;width:250px;height:100%;background-color: rgba(0,0,0,.9);text-transform:uppercase;}
-.side-menu-burger div {width:62px;height:50px;background:url(../img/side-menu-burger.png) center top no-repeat; background-size:49px 40px; transition:.5s ease-out; perspective;50px; transform:rotateY(0deg);}
+.side-menu-burger div {width:62px;height:50px;background:url(../img/logo.png) center top no-repeat; background-size:49px 40px; transition:.5s ease-out; perspective;50px; transform:rotateY(0deg);}
 .side-menu-burger:hover div {background-image:url(../img/logo-hover.png) !important;}
 .side-menu-burger {position:absolute;top:7%;left:50%;margin-left:-31px;color:#fff;width:62px;font-size: 14px;font-weight: 300;height:50px;-webkit-perspective;100px;}
 .side-menu-burger span { display:block; margin:0 auto; position:relative; top:-5px; transition:.5s ease-out; width:62px; text-align:center; }
@@ -250,7 +250,7 @@ box-shadow: 0px 0px 33px 5px rgba(17,17,17,1);
 
 /* Контакты */
 .contacts header {padding: 5px 0px;}
-.contacts article {text-align:center;padding:50px; margin-top:-40px;}
+.contacts article {text-align:center;padding:5px 50px;}
 .contacts article>div {display:inline-block;text-align:left; margin:0 15px;}
 .contacts article div i, .contacts article div p {display:inline-block;}
 .contacts article div i {padding-right:10px;font-size:1.2em;}
@@ -258,7 +258,7 @@ box-shadow: 0px 0px 33px 5px rgba(17,17,17,1);
 -webkit-box-shadow: 0px 0px 33px 5px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 33px 5px rgba(0,0,0,0.75);
 box-shadow: 0px 0px 33px 5px rgba(0,0,0,0.75);}
-.contacts article h3 {color:#ddd;padding:20px 0;}
+.contacts article h3 {color:#ddd;padding:10px 0;}
 .contacts article form>div {display:inline-block;width:35%;vertical-align:top;}
 .contacts article form>div:last-child {width:20%;text-align:right;}
 .contacts article form input {display:block;background:#222;border-color:transparent; border-bottom:2px solid #666;outline:none;}
